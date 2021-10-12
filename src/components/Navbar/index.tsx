@@ -1,9 +1,8 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import s from './Navbar.module.css'
 
-import s from './Navbar.module.css';
-
-const Navbar = () => {
+const Navbar: React.FC = () => {
     return (
         <nav className="navbar">
             <ul className="menu__list">
@@ -17,5 +16,5 @@ const Navbar = () => {
 }
 
 
-export default Navbar;
+export default Navbar
 

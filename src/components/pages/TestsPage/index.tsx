@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 import TestsBlockContainer from '../../common/TestsBlock'
 
-import s from './TestsPage.module.css';
+import s from './TestsPage.module.css'
 
-const TestsPage = () => {
+const TestsPage: React.FC = () => {
     return (
         <div className={s.testsPage}>
             <TestsBlockContainer />
@@ -11,4 +11,4 @@ const TestsPage = () => {
     )
 }
 
-export default TestsPage;
+export default TestsPage

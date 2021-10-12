@@ -1,9 +1,8 @@
-import React from 'react';
-import Spinner from '../spinner';
+import React from 'react'
+import Spinner from '../spinner'
+import s from './TestsBlock.module.css'
 
-import s from './TestsBlock.module.css';
-
-const TestsBlock = ({questions}) => {
+const TestsBlock: React.FC<TestsBlockPropsType> = ({questions}) => {
     debugger;
     if (!questions) return <Spinner />
     return (
@@ -19,9 +18,9 @@ const TestsBlock = ({questions}) => {
 }
 
 
-const QuestionBlock = ({question}) => {
-    debugger;
-    const answers = question.answers.map(a => {
+const QuestionBlock: React.FC<QuestionBlockPropsType> = ({question}) => {
+
+    const answers = question.answers.map((a: any) => { // todo: AnswerType
         return (
             <div className={s.customRadio} key={a.id}>
                 <input className={s.answerInput} id={a.id} name="result" type="radio"/>
@@ -46,4 +45,15 @@ const QuestionBlock = ({question}) => {
     )
 }
 
-export default TestsBlock;
+export default TestsBlock
+
+
+
+
+type TestsBlockPropsType = {
+    questions: any // todo: QuestionType[]
+}
+
+type QuestionBlockPropsType = {
+    question: any // todo: QuestionType
+}

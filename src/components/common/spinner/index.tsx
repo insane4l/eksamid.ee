@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 
-import './Spinner.css';
+import './Spinner.css'
 
-const Spinner = () => {
+const Spinner: React.FC = () => {
     return (
-        <div class="loadingio-spinner-spin-kjiv0fi1d9t"><div class="ldio-97nxs5mea4t">
+        <div className="loadingio-spinner-spin-kjiv0fi1d9t"><div className="ldio-97nxs5mea4t">
             <div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div>
             </div>
         </div>
     )
 }
 
-export default Spinner;
+export default Spinner

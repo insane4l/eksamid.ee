@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import s from './Footer.module.css';
+import s from './Footer.module.css'
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
         <footer className={s.footer}>
              © <a href="http://karpeyev.ru" className={s.authorLink}>karpeyev</a>
@@ -10,4 +10,4 @@ const Footer = () => {
     )
 }
 
-export default Footer;
+export default Footer

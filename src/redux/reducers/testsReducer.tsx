@@ -28,11 +28,11 @@ const initialState = {
     ]
 }
 
-const testsReducer = (state = initialState, action) => {
+const testsReducer = (state = initialState, action: any) => { // todo: infer, ActionTypes
     switch(action.type) {
         default:
-            return state;
+            return state
     }
 }
 
-export default testsReducer;
+export default testsReducer

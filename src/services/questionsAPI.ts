@@ -24,21 +24,21 @@ const serverData = [
 
 
 
-const GetQuestions = (data) => {
-    return new Promise((res) => {
+export const GetQuestions = (data: QuestionType[]) => {
+    return new Promise<QuestionType[]>((res) => {
         res(data)
     });
 };
 
-const SaveToLocalStorage = (data) => {
-    return new Promise(res => {
+const SaveToLocalStorage = (data: QuestionType[]) => {
+    return new Promise<void>( (res) => {
         const dataStr = JSON.stringify(data);
         localStorage.setItem("server-data", dataStr);
         res();
     })
 };
 
-const notify = (message) => {
+const notify = (message: string) => {
     console.log(message);
 };
 
@@ -49,5 +49,12 @@ const notify = (message) => {
 
 
 GetQuestions(serverData)
-    .then(data => SaveToLocalStorage(data))
+    .then((data: QuestionType[]) => SaveToLocalStorage(data))
     .then(() => notify('Questions saved successfully'));
+
+
+
+
+
+
+type QuestionType = typeof serverData[0] // todo: QuestionType will be upgrade (save and export common types in types.ts)
